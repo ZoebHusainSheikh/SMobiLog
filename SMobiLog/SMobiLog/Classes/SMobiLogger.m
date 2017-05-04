@@ -301,22 +301,20 @@
 {
     SLog *sLogModel = [[SLog alloc] initWithTitle:title description:description date:logDate type:logType];
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        @autoreleasepool
+    @autoreleasepool
+    {
+        RLMRealm *realm = [RLMRealm defaultRealm];
+        SLogCollectionRealm *sLogCollection = [SLogCollectionRealm objectForPrimaryKey:[SLogCollectionRealm className]];
+        
+        if(sLogCollection)
         {
-            RLMRealm *realm = [RLMRealm defaultRealm];
-            SLogCollectionRealm *sLogCollection = [SLogCollectionRealm objectForPrimaryKey:[SLogCollectionRealm className]];
+            [realm beginWriteTransaction];
             
-            if(sLogCollection)
-            {
-                [realm beginWriteTransaction];
-                
-                [sLogCollection insertSLog:[[SLogRealm alloc] initWithSLogModel:sLogModel]];
-                
-                [realm commitWriteTransaction];
-            }
+            [sLogCollection insertSLog:[[SLogRealm alloc] initWithSLogModel:sLogModel]];
+            
+            [realm commitWriteTransaction];
         }
-    });
+    }
 }
 
 - (int)readDateRangeFromPlist
