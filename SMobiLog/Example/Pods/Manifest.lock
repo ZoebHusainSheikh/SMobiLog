@@ -1,0 +1,16 @@
+PODS:
+  - SMobiLog (0.1.0)
+
+DEPENDENCIES:
+  - SMobiLog (from `../`)
+
+EXTERNAL SOURCES:
+  SMobiLog:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SMobiLog: 26f60d554f9c594a345be0eb685008dd016e1792
+
+PODFILE CHECKSUM: 1cae0f38fff5e930918dfddddabe9cb5a80ce8b1
+
+COCOAPODS: 1.2.1

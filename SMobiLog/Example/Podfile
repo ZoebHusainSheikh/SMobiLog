@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SMobiLog_Example' do
+  pod 'SMobiLog', :path => '../'
+
+  target 'SMobiLog_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

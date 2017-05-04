@@ -1,0 +1,22 @@
+{
+  "name": "SMobiLog",
+  "version": "0.1.0",
+  "summary": "A short description of SMobiLog.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/zsheikh-systango/SMobiLog",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "zsheikh-systango": "zsheikh@isystango.com"
+  },
+  "source": {
+    "git": "https://github.com/zsheikh-systango/SMobiLog.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SMobiLog/Classes/**/*"
+}

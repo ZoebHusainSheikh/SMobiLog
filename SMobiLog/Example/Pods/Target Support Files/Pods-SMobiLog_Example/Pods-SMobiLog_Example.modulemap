@@ -1,0 +1,6 @@
+framework module Pods_SMobiLog_Example {
+  umbrella header "Pods-SMobiLog_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

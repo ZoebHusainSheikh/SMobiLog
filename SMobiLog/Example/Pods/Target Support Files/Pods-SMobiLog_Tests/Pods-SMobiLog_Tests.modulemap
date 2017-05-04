@@ -1,0 +1,6 @@
+framework module Pods_SMobiLog_Tests {
+  umbrella header "Pods-SMobiLog_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

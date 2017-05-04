@@ -1,0 +1,845 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6F3AB11EE99D77CDDA52D34D507980BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		750CE4DE21FE187DA9E1D814A0A985A5 /* Pods-SMobiLog_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D55395D860D9661DFF3C613AFC258CF /* Pods-SMobiLog_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7844145BD6A1531FE53C7D714A32B0DE /* Pods-SMobiLog_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F93836B255641C035BD4BFE048EEF52 /* Pods-SMobiLog_Tests-dummy.m */; };
+		92F158DC7562A6CB2C0C5B3F9D1B0BA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		A83A2506BE08FF5A63658F0C1D5B7BC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		C6C2B53A4B681C1CC5EE0EA883DF35EF /* Pods-SMobiLog_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 655F0444602D37CBA6590DB569D4AF8E /* Pods-SMobiLog_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0DB8DBAD7446EEB1C6726369DE4A344 /* SMobiLog-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9D3093A6890E7D1EB7096813C252A1 /* SMobiLog-dummy.m */; };
+		D171B953760EF6B3F10D707FC1A3A013 /* Pods-SMobiLog_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F5D8312AE02EB22EFA5641AE6531BF /* Pods-SMobiLog_Example-dummy.m */; };
+		EFDD40771EBB06F2004CB883 /* SMobiLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = EFDD406C1EBB06F2004CB883 /* SMobiLogger.h */; };
+		EFDD40781EBB06F2004CB883 /* SMobiLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = EFDD406C1EBB06F2004CB883 /* SMobiLogger.h */; };
+		EFDD40791EBB06F2004CB883 /* SMobiLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = EFDD406C1EBB06F2004CB883 /* SMobiLogger.h */; };
+		EFDD407A1EBB06F2004CB883 /* SLog.h in Headers */ = {isa = PBXBuildFile; fileRef = EFDD406D1EBB06F2004CB883 /* SLog.h */; };
+		EFDD407B1EBB06F2004CB883 /* SLog.h in Headers */ = {isa = PBXBuildFile; fileRef = EFDD406D1EBB06F2004CB883 /* SLog.h */; };
+		EFDD407C1EBB06F2004CB883 /* SLog.h in Headers */ = {isa = PBXBuildFile; fileRef = EFDD406D1EBB06F2004CB883 /* SLog.h */; };
+		EFDD407D1EBB06F2004CB883 /* SLog.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDD406E1EBB06F2004CB883 /* SLog.m */; };
+		EFDD407E1EBB06F2004CB883 /* SLog.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDD406E1EBB06F2004CB883 /* SLog.m */; };
+		EFDD407F1EBB06F2004CB883 /* SLog.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDD406E1EBB06F2004CB883 /* SLog.m */; };
+		EFDD40801EBB06F2004CB883 /* SLogCollectionRealm.h in Headers */ = {isa = PBXBuildFile; fileRef = EFDD406F1EBB06F2004CB883 /* SLogCollectionRealm.h */; };
+		EFDD40811EBB06F2004CB883 /* SLogCollectionRealm.h in Headers */ = {isa = PBXBuildFile; fileRef = EFDD406F1EBB06F2004CB883 /* SLogCollectionRealm.h */; };
+		EFDD40821EBB06F2004CB883 /* SLogCollectionRealm.h in Headers */ = {isa = PBXBuildFile; fileRef = EFDD406F1EBB06F2004CB883 /* SLogCollectionRealm.h */; };
+		EFDD40831EBB06F2004CB883 /* SLogCollectionRealm.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDD40701EBB06F2004CB883 /* SLogCollectionRealm.m */; };
+		EFDD40841EBB06F2004CB883 /* SLogCollectionRealm.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDD40701EBB06F2004CB883 /* SLogCollectionRealm.m */; };
+		EFDD40851EBB06F2004CB883 /* SLogCollectionRealm.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDD40701EBB06F2004CB883 /* SLogCollectionRealm.m */; };
+		EFDD40861EBB06F2004CB883 /* SLogRealm.h in Headers */ = {isa = PBXBuildFile; fileRef = EFDD40711EBB06F2004CB883 /* SLogRealm.h */; };
+		EFDD40871EBB06F2004CB883 /* SLogRealm.h in Headers */ = {isa = PBXBuildFile; fileRef = EFDD40711EBB06F2004CB883 /* SLogRealm.h */; };
+		EFDD40881EBB06F2004CB883 /* SLogRealm.h in Headers */ = {isa = PBXBuildFile; fileRef = EFDD40711EBB06F2004CB883 /* SLogRealm.h */; };
+		EFDD40891EBB06F2004CB883 /* SLogRealm.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDD40721EBB06F2004CB883 /* SLogRealm.m */; };
+		EFDD408A1EBB06F2004CB883 /* SLogRealm.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDD40721EBB06F2004CB883 /* SLogRealm.m */; };
+		EFDD408B1EBB06F2004CB883 /* SLogRealm.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDD40721EBB06F2004CB883 /* SLogRealm.m */; };
+		EFDD408C1EBB06F2004CB883 /* SMobiLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDD40731EBB06F2004CB883 /* SMobiLogger.m */; };
+		EFDD408D1EBB06F2004CB883 /* SMobiLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDD40731EBB06F2004CB883 /* SMobiLogger.m */; };
+		EFDD408E1EBB06F2004CB883 /* SMobiLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDD40731EBB06F2004CB883 /* SMobiLogger.m */; };
+		EFDD408F1EBB06F2004CB883 /* SUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = EFDD40741EBB06F2004CB883 /* SUtil.h */; };
+		EFDD40901EBB06F2004CB883 /* SUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = EFDD40741EBB06F2004CB883 /* SUtil.h */; };
+		EFDD40911EBB06F2004CB883 /* SUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = EFDD40741EBB06F2004CB883 /* SUtil.h */; };
+		EFDD40921EBB06F2004CB883 /* SUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDD40751EBB06F2004CB883 /* SUtil.m */; };
+		EFDD40931EBB06F2004CB883 /* SUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDD40751EBB06F2004CB883 /* SUtil.m */; };
+		EFDD40941EBB06F2004CB883 /* SUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDD40751EBB06F2004CB883 /* SUtil.m */; };
+		EFDD40951EBB06F2004CB883 /* LoggerConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = EFDD40761EBB06F2004CB883 /* LoggerConstants.h */; };
+		EFDD40961EBB06F2004CB883 /* LoggerConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = EFDD40761EBB06F2004CB883 /* LoggerConstants.h */; };
+		EFDD40971EBB06F2004CB883 /* LoggerConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = EFDD40761EBB06F2004CB883 /* LoggerConstants.h */; };
+		EFDD409B1EBB08B0004CB883 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDD409A1EBB08B0004CB883 /* Realm.framework */; };
+		EFDD409C1EBB08B0004CB883 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDD409A1EBB08B0004CB883 /* Realm.framework */; };
+		EFDD409D1EBB08B0004CB883 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDD409A1EBB08B0004CB883 /* Realm.framework */; };
+		FB06B29CD666D2BA903D3E1824A783A6 /* SMobiLog-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EBEDAF41FBE28A5D7A3C523075C3516D /* SMobiLog-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		26658E373930E3CB8F03000D5B817FB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2AED6F1D5C2F72CD43261BD9FD6F5C7B;
+			remoteInfo = SMobiLog;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04F5D8312AE02EB22EFA5641AE6531BF /* Pods-SMobiLog_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SMobiLog_Example-dummy.m"; sourceTree = "<group>"; };
+		0CE2EFBB8EE295E3C04971ACA11E8ABD /* SMobiLog-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SMobiLog-prefix.pch"; sourceTree = "<group>"; };
+		1C36A86DBF64E0C8890299523D35C1C3 /* Pods-SMobiLog_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SMobiLog_Tests-resources.sh"; sourceTree = "<group>"; };
+		222567C596457E3C581EE37847A9A4A2 /* Pods-SMobiLog_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SMobiLog_Example-frameworks.sh"; sourceTree = "<group>"; };
+		2A53C0EB6DEABED3DC35EF40C7731E90 /* Pods-SMobiLog_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SMobiLog_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		30950362A6C5630451F01B58BFCAB591 /* Pods-SMobiLog_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SMobiLog_Example-resources.sh"; sourceTree = "<group>"; };
+		3C6B22B53C9196E94D3DA3452CF76DFE /* Pods-SMobiLog_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SMobiLog_Example.modulemap"; sourceTree = "<group>"; };
+		485A559B10C423564D47AC2291056E4E /* Pods-SMobiLog_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SMobiLog_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		5B9D3093A6890E7D1EB7096813C252A1 /* SMobiLog-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SMobiLog-dummy.m"; sourceTree = "<group>"; };
+		655F0444602D37CBA6590DB569D4AF8E /* Pods-SMobiLog_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SMobiLog_Example-umbrella.h"; sourceTree = "<group>"; };
+		65C05B9320B5EFB7222CF80E352EF7CA /* Pods-SMobiLog_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SMobiLog_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		715CCEFDA2863520FDDF093B6C181D26 /* Pods-SMobiLog_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SMobiLog_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		779D0AD15EE8374AD7F3BC6AF72E40A4 /* SMobiLog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SMobiLog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78C4BE925F2FE47BE4366BA423032DBA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D55395D860D9661DFF3C613AFC258CF /* Pods-SMobiLog_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SMobiLog_Tests-umbrella.h"; sourceTree = "<group>"; };
+		838FBAE2B926D6481B6C67E53FCEF740 /* Pods-SMobiLog_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SMobiLog_Tests.modulemap"; sourceTree = "<group>"; };
+		8CA3CA18FC2084228D2C961B01314CA0 /* Pods-SMobiLog_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SMobiLog_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		947E70D1820F3713E1B183762E76A3D3 /* Pods-SMobiLog_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SMobiLog_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9CF677051BDDD248D40E3F38151790A4 /* Pods_SMobiLog_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMobiLog_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F93836B255641C035BD4BFE048EEF52 /* Pods-SMobiLog_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SMobiLog_Tests-dummy.m"; sourceTree = "<group>"; };
+		A58EC8B1CEB6ED7789192803180BBB97 /* SMobiLog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SMobiLog.xcconfig; sourceTree = "<group>"; };
+		ADCAF6D0D4518DFA03123CF26CCD8CF0 /* Pods_SMobiLog_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMobiLog_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE869D7B7C5FDAAB727D64F6ED9A2C92 /* Pods-SMobiLog_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SMobiLog_Example.release.xcconfig"; sourceTree = "<group>"; };
+		C2E8949DF8F3FD4078EE0F2CE199AB1F /* Pods-SMobiLog_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SMobiLog_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		C6E6C91153B66044BA0092E293BCFDD3 /* SMobiLog.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SMobiLog.modulemap; sourceTree = "<group>"; };
+		D74C441812992699399B7D3A6F36B395 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D86EF62F127328DB76EC080B8781B0C5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBEDAF41FBE28A5D7A3C523075C3516D /* SMobiLog-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SMobiLog-umbrella.h"; sourceTree = "<group>"; };
+		EFDD406C1EBB06F2004CB883 /* SMobiLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMobiLogger.h; sourceTree = "<group>"; };
+		EFDD406D1EBB06F2004CB883 /* SLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLog.h; sourceTree = "<group>"; };
+		EFDD406E1EBB06F2004CB883 /* SLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLog.m; sourceTree = "<group>"; };
+		EFDD406F1EBB06F2004CB883 /* SLogCollectionRealm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLogCollectionRealm.h; sourceTree = "<group>"; };
+		EFDD40701EBB06F2004CB883 /* SLogCollectionRealm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLogCollectionRealm.m; sourceTree = "<group>"; };
+		EFDD40711EBB06F2004CB883 /* SLogRealm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLogRealm.h; sourceTree = "<group>"; };
+		EFDD40721EBB06F2004CB883 /* SLogRealm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLogRealm.m; sourceTree = "<group>"; };
+		EFDD40731EBB06F2004CB883 /* SMobiLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMobiLogger.m; sourceTree = "<group>"; };
+		EFDD40741EBB06F2004CB883 /* SUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUtil.h; sourceTree = "<group>"; };
+		EFDD40751EBB06F2004CB883 /* SUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUtil.m; sourceTree = "<group>"; };
+		EFDD40761EBB06F2004CB883 /* LoggerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoggerConstants.h; sourceTree = "<group>"; };
+		EFDD409A1EBB08B0004CB883 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		EFDD409F1EBB0906004CB883 /* Lib.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Lib.plist; sourceTree = "<group>"; };
+		F99636DAB42388C9068E5FBD4D179E42 /* Pods-SMobiLog_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SMobiLog_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6B6FE17E810971057E3E4C9FCD1D9F4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFDD409D1EBB08B0004CB883 /* Realm.framework in Frameworks */,
+				6F3AB11EE99D77CDDA52D34D507980BE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D49D6029F1256DF6F654967D0CEED810 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFDD409B1EBB08B0004CB883 /* Realm.framework in Frameworks */,
+				A83A2506BE08FF5A63658F0C1D5B7BC7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDE6D9A1457D12292C415EDCDB6AF09C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFDD409C1EBB08B0004CB883 /* Realm.framework in Frameworks */,
+				92F158DC7562A6CB2C0C5B3F9D1B0BA2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3955B8D157BAC59512FD9166EEECA7C3 /* SMobiLog */ = {
+			isa = PBXGroup;
+			children = (
+				E771712A3B57287CC380C6AAE8B3C877 /* Classes */,
+				EFDD409E1EBB0906004CB883 /* Resources */,
+			);
+			path = SMobiLog;
+			sourceTree = "<group>";
+		};
+		6F8B817F3F88B18551E184F6628622F4 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E22438C6AE2F0D782CDFAECCA7084226 /* SMobiLog */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				6F8B817F3F88B18551E184F6628622F4 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				BF21B19DD396E3F8E0194BCEB77D9398 /* Products */,
+				D8C9D3FF5E3C9A56A0DAA9219C25C633 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8477A3E19463206BFFA85BFB34313404 /* Pods-SMobiLog_Example */ = {
+			isa = PBXGroup;
+			children = (
+				D74C441812992699399B7D3A6F36B395 /* Info.plist */,
+				3C6B22B53C9196E94D3DA3452CF76DFE /* Pods-SMobiLog_Example.modulemap */,
+				947E70D1820F3713E1B183762E76A3D3 /* Pods-SMobiLog_Example-acknowledgements.markdown */,
+				C2E8949DF8F3FD4078EE0F2CE199AB1F /* Pods-SMobiLog_Example-acknowledgements.plist */,
+				04F5D8312AE02EB22EFA5641AE6531BF /* Pods-SMobiLog_Example-dummy.m */,
+				222567C596457E3C581EE37847A9A4A2 /* Pods-SMobiLog_Example-frameworks.sh */,
+				30950362A6C5630451F01B58BFCAB591 /* Pods-SMobiLog_Example-resources.sh */,
+				655F0444602D37CBA6590DB569D4AF8E /* Pods-SMobiLog_Example-umbrella.h */,
+				485A559B10C423564D47AC2291056E4E /* Pods-SMobiLog_Example.debug.xcconfig */,
+				AE869D7B7C5FDAAB727D64F6ED9A2C92 /* Pods-SMobiLog_Example.release.xcconfig */,
+			);
+			name = "Pods-SMobiLog_Example";
+			path = "Target Support Files/Pods-SMobiLog_Example";
+			sourceTree = "<group>";
+		};
+		9DAE7323033F88F48F3082BAB73262C3 /* Pods-SMobiLog_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D86EF62F127328DB76EC080B8781B0C5 /* Info.plist */,
+				838FBAE2B926D6481B6C67E53FCEF740 /* Pods-SMobiLog_Tests.modulemap */,
+				2A53C0EB6DEABED3DC35EF40C7731E90 /* Pods-SMobiLog_Tests-acknowledgements.markdown */,
+				F99636DAB42388C9068E5FBD4D179E42 /* Pods-SMobiLog_Tests-acknowledgements.plist */,
+				9F93836B255641C035BD4BFE048EEF52 /* Pods-SMobiLog_Tests-dummy.m */,
+				715CCEFDA2863520FDDF093B6C181D26 /* Pods-SMobiLog_Tests-frameworks.sh */,
+				1C36A86DBF64E0C8890299523D35C1C3 /* Pods-SMobiLog_Tests-resources.sh */,
+				7D55395D860D9661DFF3C613AFC258CF /* Pods-SMobiLog_Tests-umbrella.h */,
+				8CA3CA18FC2084228D2C961B01314CA0 /* Pods-SMobiLog_Tests.debug.xcconfig */,
+				65C05B9320B5EFB7222CF80E352EF7CA /* Pods-SMobiLog_Tests.release.xcconfig */,
+			);
+			name = "Pods-SMobiLog_Tests";
+			path = "Target Support Files/Pods-SMobiLog_Tests";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF21B19DD396E3F8E0194BCEB77D9398 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9CF677051BDDD248D40E3F38151790A4 /* Pods_SMobiLog_Example.framework */,
+				ADCAF6D0D4518DFA03123CF26CCD8CF0 /* Pods_SMobiLog_Tests.framework */,
+				779D0AD15EE8374AD7F3BC6AF72E40A4 /* SMobiLog.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EFDD409A1EBB08B0004CB883 /* Realm.framework */,
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D8C9D3FF5E3C9A56A0DAA9219C25C633 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8477A3E19463206BFFA85BFB34313404 /* Pods-SMobiLog_Example */,
+				9DAE7323033F88F48F3082BAB73262C3 /* Pods-SMobiLog_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		E22438C6AE2F0D782CDFAECCA7084226 /* SMobiLog */ = {
+			isa = PBXGroup;
+			children = (
+				3955B8D157BAC59512FD9166EEECA7C3 /* SMobiLog */,
+				F64E752C776EF654BE3BAC8AC6B0F50C /* Support Files */,
+			);
+			name = SMobiLog;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		E771712A3B57287CC380C6AAE8B3C877 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EFDD406C1EBB06F2004CB883 /* SMobiLogger.h */,
+				EFDD406D1EBB06F2004CB883 /* SLog.h */,
+				EFDD406E1EBB06F2004CB883 /* SLog.m */,
+				EFDD406F1EBB06F2004CB883 /* SLogCollectionRealm.h */,
+				EFDD40701EBB06F2004CB883 /* SLogCollectionRealm.m */,
+				EFDD40711EBB06F2004CB883 /* SLogRealm.h */,
+				EFDD40721EBB06F2004CB883 /* SLogRealm.m */,
+				EFDD40731EBB06F2004CB883 /* SMobiLogger.m */,
+				EFDD40741EBB06F2004CB883 /* SUtil.h */,
+				EFDD40751EBB06F2004CB883 /* SUtil.m */,
+				EFDD40761EBB06F2004CB883 /* LoggerConstants.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		EFDD409E1EBB0906004CB883 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EFDD409F1EBB0906004CB883 /* Lib.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F64E752C776EF654BE3BAC8AC6B0F50C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				78C4BE925F2FE47BE4366BA423032DBA /* Info.plist */,
+				C6E6C91153B66044BA0092E293BCFDD3 /* SMobiLog.modulemap */,
+				A58EC8B1CEB6ED7789192803180BBB97 /* SMobiLog.xcconfig */,
+				5B9D3093A6890E7D1EB7096813C252A1 /* SMobiLog-dummy.m */,
+				0CE2EFBB8EE295E3C04971ACA11E8ABD /* SMobiLog-prefix.pch */,
+				EBEDAF41FBE28A5D7A3C523075C3516D /* SMobiLog-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SMobiLog";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		687588D82FF8057A128924471462C9C0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFDD40911EBB06F2004CB883 /* SUtil.h in Headers */,
+				FB06B29CD666D2BA903D3E1824A783A6 /* SMobiLog-umbrella.h in Headers */,
+				EFDD40821EBB06F2004CB883 /* SLogCollectionRealm.h in Headers */,
+				EFDD40791EBB06F2004CB883 /* SMobiLogger.h in Headers */,
+				EFDD407C1EBB06F2004CB883 /* SLog.h in Headers */,
+				EFDD40881EBB06F2004CB883 /* SLogRealm.h in Headers */,
+				EFDD40971EBB06F2004CB883 /* LoggerConstants.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBDBD5ECFE7C603B4AA4BA5336700F7F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFDD408F1EBB06F2004CB883 /* SUtil.h in Headers */,
+				C6C2B53A4B681C1CC5EE0EA883DF35EF /* Pods-SMobiLog_Example-umbrella.h in Headers */,
+				EFDD40801EBB06F2004CB883 /* SLogCollectionRealm.h in Headers */,
+				EFDD40771EBB06F2004CB883 /* SMobiLogger.h in Headers */,
+				EFDD407A1EBB06F2004CB883 /* SLog.h in Headers */,
+				EFDD40861EBB06F2004CB883 /* SLogRealm.h in Headers */,
+				EFDD40951EBB06F2004CB883 /* LoggerConstants.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBDF80564437F517321C3DE1F6D9DD30 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFDD40901EBB06F2004CB883 /* SUtil.h in Headers */,
+				750CE4DE21FE187DA9E1D814A0A985A5 /* Pods-SMobiLog_Tests-umbrella.h in Headers */,
+				EFDD40811EBB06F2004CB883 /* SLogCollectionRealm.h in Headers */,
+				EFDD40781EBB06F2004CB883 /* SMobiLogger.h in Headers */,
+				EFDD407B1EBB06F2004CB883 /* SLog.h in Headers */,
+				EFDD40871EBB06F2004CB883 /* SLogRealm.h in Headers */,
+				EFDD40961EBB06F2004CB883 /* LoggerConstants.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2AED6F1D5C2F72CD43261BD9FD6F5C7B /* SMobiLog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C26DF13940DE8F29A724437D07634AA1 /* Build configuration list for PBXNativeTarget "SMobiLog" */;
+			buildPhases = (
+				C93EE6E815295A29E05C76887D459294 /* Sources */,
+				6B6FE17E810971057E3E4C9FCD1D9F4C /* Frameworks */,
+				687588D82FF8057A128924471462C9C0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SMobiLog;
+			productName = SMobiLog;
+			productReference = 779D0AD15EE8374AD7F3BC6AF72E40A4 /* SMobiLog.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4D4CF6B1B3DCE6A56AE31B85A600735C /* Pods-SMobiLog_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EBCFA9F1CEB2B1006211DC54CE1B1EC /* Build configuration list for PBXNativeTarget "Pods-SMobiLog_Tests" */;
+			buildPhases = (
+				2066A8714A4F8F9D06C66C56D0FEEBC9 /* Sources */,
+				EDE6D9A1457D12292C415EDCDB6AF09C /* Frameworks */,
+				FBDF80564437F517321C3DE1F6D9DD30 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-SMobiLog_Tests";
+			productName = "Pods-SMobiLog_Tests";
+			productReference = ADCAF6D0D4518DFA03123CF26CCD8CF0 /* Pods_SMobiLog_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7745F513207B70C49A01CEC24907AC1C /* Pods-SMobiLog_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25CD31B4EAC48E6A2AE771130B3FB704 /* Build configuration list for PBXNativeTarget "Pods-SMobiLog_Example" */;
+			buildPhases = (
+				5F0B766D64B067D3248947FC5EEDE4FF /* Sources */,
+				D49D6029F1256DF6F654967D0CEED810 /* Frameworks */,
+				DBDBD5ECFE7C603B4AA4BA5336700F7F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E831E6BD6D2D1F811CA2F3999B92B09A /* PBXTargetDependency */,
+			);
+			name = "Pods-SMobiLog_Example";
+			productName = "Pods-SMobiLog_Example";
+			productReference = 9CF677051BDDD248D40E3F38151790A4 /* Pods_SMobiLog_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0820;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = BF21B19DD396E3F8E0194BCEB77D9398 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7745F513207B70C49A01CEC24907AC1C /* Pods-SMobiLog_Example */,
+				4D4CF6B1B3DCE6A56AE31B85A600735C /* Pods-SMobiLog_Tests */,
+				2AED6F1D5C2F72CD43261BD9FD6F5C7B /* SMobiLog */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2066A8714A4F8F9D06C66C56D0FEEBC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFDD408A1EBB06F2004CB883 /* SLogRealm.m in Sources */,
+				EFDD408D1EBB06F2004CB883 /* SMobiLogger.m in Sources */,
+				EFDD407E1EBB06F2004CB883 /* SLog.m in Sources */,
+				EFDD40931EBB06F2004CB883 /* SUtil.m in Sources */,
+				7844145BD6A1531FE53C7D714A32B0DE /* Pods-SMobiLog_Tests-dummy.m in Sources */,
+				EFDD40841EBB06F2004CB883 /* SLogCollectionRealm.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F0B766D64B067D3248947FC5EEDE4FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFDD40891EBB06F2004CB883 /* SLogRealm.m in Sources */,
+				EFDD408C1EBB06F2004CB883 /* SMobiLogger.m in Sources */,
+				EFDD407D1EBB06F2004CB883 /* SLog.m in Sources */,
+				EFDD40921EBB06F2004CB883 /* SUtil.m in Sources */,
+				D171B953760EF6B3F10D707FC1A3A013 /* Pods-SMobiLog_Example-dummy.m in Sources */,
+				EFDD40831EBB06F2004CB883 /* SLogCollectionRealm.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C93EE6E815295A29E05C76887D459294 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFDD408B1EBB06F2004CB883 /* SLogRealm.m in Sources */,
+				EFDD408E1EBB06F2004CB883 /* SMobiLogger.m in Sources */,
+				EFDD407F1EBB06F2004CB883 /* SLog.m in Sources */,
+				EFDD40941EBB06F2004CB883 /* SUtil.m in Sources */,
+				D0DB8DBAD7446EEB1C6726369DE4A344 /* SMobiLog-dummy.m in Sources */,
+				EFDD40851EBB06F2004CB883 /* SLogCollectionRealm.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E831E6BD6D2D1F811CA2F3999B92B09A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SMobiLog;
+			target = 2AED6F1D5C2F72CD43261BD9FD6F5C7B /* SMobiLog */;
+			targetProxy = 26658E373930E3CB8F03000D5B817FB8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		089FF2720371A5FA272A5D57241AA09C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE869D7B7C5FDAAB727D64F6ED9A2C92 /* Pods-SMobiLog_Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SMobiLog_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SMobiLog_Example/Pods-SMobiLog_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SMobiLog_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		345CC476DF4A7516DBD2220CF5035FF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		679E8B957017E6633AC8484F8132193E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A58EC8B1CEB6ED7789192803180BBB97 /* SMobiLog.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SMobiLog/SMobiLog-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SMobiLog/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SMobiLog/SMobiLog.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SMobiLog;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		717E77604BFBB04BEAF56608A1CB2EDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9183E427E351E9E9F774FCD00C86CC3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CA3CA18FC2084228D2C961B01314CA0 /* Pods-SMobiLog_Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SMobiLog_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SMobiLog_Tests/Pods-SMobiLog_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SMobiLog_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ACB395C3695F128F40D327A58F4DB9C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 485A559B10C423564D47AC2291056E4E /* Pods-SMobiLog_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SMobiLog_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SMobiLog_Example/Pods-SMobiLog_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SMobiLog_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BC0567D583B1B76BC681329C0B8F7D04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65C05B9320B5EFB7222CF80E352EF7CA /* Pods-SMobiLog_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SMobiLog_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SMobiLog_Tests/Pods-SMobiLog_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SMobiLog_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BDD258B730DF1C51A9C41D30F1502C38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A58EC8B1CEB6ED7789192803180BBB97 /* SMobiLog.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SMobiLog/SMobiLog-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SMobiLog/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SMobiLog/SMobiLog.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SMobiLog;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		25CD31B4EAC48E6A2AE771130B3FB704 /* Build configuration list for PBXNativeTarget "Pods-SMobiLog_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACB395C3695F128F40D327A58F4DB9C7 /* Debug */,
+				089FF2720371A5FA272A5D57241AA09C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				345CC476DF4A7516DBD2220CF5035FF3 /* Debug */,
+				717E77604BFBB04BEAF56608A1CB2EDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2EBCFA9F1CEB2B1006211DC54CE1B1EC /* Build configuration list for PBXNativeTarget "Pods-SMobiLog_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9183E427E351E9E9F774FCD00C86CC3F /* Debug */,
+				BC0567D583B1B76BC681329C0B8F7D04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C26DF13940DE8F29A724437D07634AA1 /* Build configuration list for PBXNativeTarget "SMobiLog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				679E8B957017E6633AC8484F8132193E /* Debug */,
+				BDD258B730DF1C51A9C41D30F1502C38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
