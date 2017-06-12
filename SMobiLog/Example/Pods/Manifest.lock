@@ -1,7 +1,75 @@
 PODS:
-  - SMobiLog (0.1.0)
+  - KSCrash (1.15.9):
+    - KSCrash/Installations (= 1.15.9)
+  - KSCrash/Installations (1.15.9):
+    - KSCrash/Recording
+    - KSCrash/Reporting
+  - KSCrash/Recording (1.15.9):
+    - KSCrash/Recording/Tools (= 1.15.9)
+  - KSCrash/Recording/Tools (1.15.9)
+  - KSCrash/Reporting (1.15.9):
+    - KSCrash/Recording
+    - KSCrash/Reporting/Filters (= 1.15.9)
+    - KSCrash/Reporting/MessageUI (= 1.15.9)
+    - KSCrash/Reporting/Sinks (= 1.15.9)
+    - KSCrash/Reporting/Tools (= 1.15.9)
+  - KSCrash/Reporting/Filters (1.15.9):
+    - KSCrash/Recording
+    - KSCrash/Reporting/Filters/Alert (= 1.15.9)
+    - KSCrash/Reporting/Filters/AppleFmt (= 1.15.9)
+    - KSCrash/Reporting/Filters/Base (= 1.15.9)
+    - KSCrash/Reporting/Filters/Basic (= 1.15.9)
+    - KSCrash/Reporting/Filters/GZip (= 1.15.9)
+    - KSCrash/Reporting/Filters/JSON (= 1.15.9)
+    - KSCrash/Reporting/Filters/Sets (= 1.15.9)
+    - KSCrash/Reporting/Filters/Stringify (= 1.15.9)
+    - KSCrash/Reporting/Filters/Tools (= 1.15.9)
+  - KSCrash/Reporting/Filters/Alert (1.15.9):
+    - KSCrash/Recording
+    - KSCrash/Reporting/Filters/Base
+  - KSCrash/Reporting/Filters/AppleFmt (1.15.9):
+    - KSCrash/Recording
+    - KSCrash/Reporting/Filters/Base
+  - KSCrash/Reporting/Filters/Base (1.15.9):
+    - KSCrash/Recording
+  - KSCrash/Reporting/Filters/Basic (1.15.9):
+    - KSCrash/Recording
+    - KSCrash/Reporting/Filters/Base
+  - KSCrash/Reporting/Filters/GZip (1.15.9):
+    - KSCrash/Recording
+    - KSCrash/Reporting/Filters/Base
+  - KSCrash/Reporting/Filters/JSON (1.15.9):
+    - KSCrash/Recording
+    - KSCrash/Reporting/Filters/Base
+  - KSCrash/Reporting/Filters/Sets (1.15.9):
+    - KSCrash/Recording
+    - KSCrash/Reporting/Filters/AppleFmt
+    - KSCrash/Reporting/Filters/Base
+    - KSCrash/Reporting/Filters/Basic
+    - KSCrash/Reporting/Filters/GZip
+    - KSCrash/Reporting/Filters/JSON
+    - KSCrash/Reporting/Filters/Stringify
+  - KSCrash/Reporting/Filters/Stringify (1.15.9):
+    - KSCrash/Recording
+    - KSCrash/Reporting/Filters/Base
+  - KSCrash/Reporting/Filters/Tools (1.15.9):
+    - KSCrash/Recording
+  - KSCrash/Reporting/MessageUI (1.15.9):
+    - KSCrash/Recording
+  - KSCrash/Reporting/Sinks (1.15.9):
+    - KSCrash/Recording
+    - KSCrash/Reporting/Filters
+    - KSCrash/Reporting/Tools
+  - KSCrash/Reporting/Tools (1.15.9):
+    - KSCrash/Recording
+  - Realm (2.8.0):
+    - Realm/Headers (= 2.8.0)
+  - Realm/Headers (2.8.0)
+  - SMobiLog (0.1.3):
+    - Realm
 
 DEPENDENCIES:
+  - KSCrash
   - SMobiLog (from `../`)
 
 EXTERNAL SOURCES:
@@ -9,8 +77,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SMobiLog: 26f60d554f9c594a345be0eb685008dd016e1792
+  KSCrash: d3e2bfd20728b8772a796809bbc5bf7ed040fa94
+  Realm: 929243ad2b618b3232e70658bedc61110e7563f1
+  SMobiLog: '011293d5966ef1313ce82975cb835c68446c53de'
 
-PODFILE CHECKSUM: 1cae0f38fff5e930918dfddddabe9cb5a80ce8b1
+PODFILE CHECKSUM: c8df32a544bf84eee2e652eacb90ba30b7f2116b
 
 COCOAPODS: 1.2.1

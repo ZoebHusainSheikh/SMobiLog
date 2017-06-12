@@ -24,6 +24,14 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		7A414A15A9ACBFA073EA611D /* Pods_SMobiLog_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6EA06134EE7F15BDD1C3412 /* Pods_SMobiLog_Example.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		EF15F1DA1EEE605700F8A244 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = EF15F1CA1EEE605700F8A244 /* .gitkeep */; };
+		EF15F1DB1EEE605700F8A244 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = EF15F1CC1EEE605700F8A244 /* .gitkeep */; };
+		EF15F1DC1EEE605700F8A244 /* SLog.m in Sources */ = {isa = PBXBuildFile; fileRef = EF15F1CF1EEE605700F8A244 /* SLog.m */; };
+		EF15F1DD1EEE605700F8A244 /* SLogCollectionRealm.m in Sources */ = {isa = PBXBuildFile; fileRef = EF15F1D11EEE605700F8A244 /* SLogCollectionRealm.m */; };
+		EF15F1DE1EEE605700F8A244 /* SLogRealm.m in Sources */ = {isa = PBXBuildFile; fileRef = EF15F1D31EEE605700F8A244 /* SLogRealm.m */; };
+		EF15F1DF1EEE605700F8A244 /* SMobiLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = EF15F1D51EEE605700F8A244 /* SMobiLogger.m */; };
+		EF15F1E01EEE605700F8A244 /* SUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EF15F1D71EEE605700F8A244 /* SUtil.m */; };
+		EF15F1E11EEE605700F8A244 /* Lib.plist in Resources */ = {isa = PBXBuildFile; fileRef = EF15F1D91EEE605700F8A244 /* Lib.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +74,20 @@
 		B9D7FC537E78A1B6C3578BF0 /* Pods-SMobiLog_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMobiLog_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SMobiLog_Example/Pods-SMobiLog_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C04E9E9A72F60C1729A264CD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		D6EA06134EE7F15BDD1C3412 /* Pods_SMobiLog_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SMobiLog_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF15F1CA1EEE605700F8A244 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		EF15F1CC1EEE605700F8A244 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		EF15F1CD1EEE605700F8A244 /* LoggerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoggerConstants.h; sourceTree = "<group>"; };
+		EF15F1CE1EEE605700F8A244 /* SLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLog.h; sourceTree = "<group>"; };
+		EF15F1CF1EEE605700F8A244 /* SLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLog.m; sourceTree = "<group>"; };
+		EF15F1D01EEE605700F8A244 /* SLogCollectionRealm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLogCollectionRealm.h; sourceTree = "<group>"; };
+		EF15F1D11EEE605700F8A244 /* SLogCollectionRealm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLogCollectionRealm.m; sourceTree = "<group>"; };
+		EF15F1D21EEE605700F8A244 /* SLogRealm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLogRealm.h; sourceTree = "<group>"; };
+		EF15F1D31EEE605700F8A244 /* SLogRealm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLogRealm.m; sourceTree = "<group>"; };
+		EF15F1D41EEE605700F8A244 /* SMobiLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMobiLogger.h; sourceTree = "<group>"; };
+		EF15F1D51EEE605700F8A244 /* SMobiLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMobiLogger.m; sourceTree = "<group>"; };
+		EF15F1D61EEE605700F8A244 /* SUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUtil.h; sourceTree = "<group>"; };
+		EF15F1D71EEE605700F8A244 /* SUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUtil.m; sourceTree = "<group>"; };
+		EF15F1D91EEE605700F8A244 /* Lib.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Lib.plist; sourceTree = "<group>"; };
 		F6F613406D799085D6B2603B /* Pods-SMobiLog_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SMobiLog_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SMobiLog_Tests/Pods-SMobiLog_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +123,7 @@
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for SMobiLog */,
 				6003F5B5195388D20070C39A /* Tests */,
+				EF15F1C81EEE605700F8A244 /* SMobiLog */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				E2CAA5F7E59DB971BD523453 /* Pods */,
@@ -196,6 +219,52 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EF15F1C81EEE605700F8A244 /* SMobiLog */ = {
+			isa = PBXGroup;
+			children = (
+				EF15F1C91EEE605700F8A244 /* Assets */,
+				EF15F1CB1EEE605700F8A244 /* Classes */,
+				EF15F1D81EEE605700F8A244 /* Resources */,
+			);
+			name = SMobiLog;
+			path = ../SMobiLog;
+			sourceTree = "<group>";
+		};
+		EF15F1C91EEE605700F8A244 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				EF15F1CA1EEE605700F8A244 /* .gitkeep */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		EF15F1CB1EEE605700F8A244 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EF15F1CC1EEE605700F8A244 /* .gitkeep */,
+				EF15F1CD1EEE605700F8A244 /* LoggerConstants.h */,
+				EF15F1CE1EEE605700F8A244 /* SLog.h */,
+				EF15F1CF1EEE605700F8A244 /* SLog.m */,
+				EF15F1D01EEE605700F8A244 /* SLogCollectionRealm.h */,
+				EF15F1D11EEE605700F8A244 /* SLogCollectionRealm.m */,
+				EF15F1D21EEE605700F8A244 /* SLogRealm.h */,
+				EF15F1D31EEE605700F8A244 /* SLogRealm.m */,
+				EF15F1D41EEE605700F8A244 /* SMobiLogger.h */,
+				EF15F1D51EEE605700F8A244 /* SMobiLogger.m */,
+				EF15F1D61EEE605700F8A244 /* SUtil.h */,
+				EF15F1D71EEE605700F8A244 /* SUtil.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		EF15F1D81EEE605700F8A244 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EF15F1D91EEE605700F8A244 /* Lib.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -281,6 +350,9 @@
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
+				EF15F1DA1EEE605700F8A244 /* .gitkeep in Resources */,
+				EF15F1E11EEE605700F8A244 /* Lib.plist in Resources */,
+				EF15F1DB1EEE605700F8A244 /* .gitkeep in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
@@ -396,7 +468,12 @@
 			files = (
 				6003F59E195388D20070C39A /* ZSAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* ZSViewController.m in Sources */,
+				EF15F1DC1EEE605700F8A244 /* SLog.m in Sources */,
+				EF15F1E01EEE605700F8A244 /* SUtil.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				EF15F1DE1EEE605700F8A244 /* SLogRealm.m in Sources */,
+				EF15F1DD1EEE605700F8A244 /* SLogCollectionRealm.m in Sources */,
+				EF15F1DF1EEE605700F8A244 /* SMobiLogger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <Realm/Realm.h>
+#import <KSCrash/KSCrash.h>
+#import <KSCrash/KSCrashInstallationStandard.h>
+#import <KSCrash/KSCrashInstallationEmail.h>
+#import <KSCrash/KSCrashInstallation+Alert.h>
 
 #ifdef DEBUG
 #define NSLog(args...) ExtendNSLogInfo(__FILE__,__LINE__,__PRETTY_FUNCTION__,args);
@@ -53,6 +57,10 @@ void ExtendNSLogWarning(const char *file, int lineNumber, const char *functionNa
 // To start timer, which delete old logs
 - (void)startMobiLogger;
 
-
+#pragma mark - KSCrash
+- (KSCrashInstallation *)installKSCrashWithURL:(NSString *)urlPath;
+- (KSCrashInstallation *)installKSCrashWithEmails:(NSArray *)emails;
+- (KSCrashInstallation *)installKSCrashWithURL:(NSString *)urlPath withAlert:(BOOL)showAlert;
+- (KSCrashInstallation *)installKSCrashWithEmails:(NSArray *)emails withAlert:(BOOL)showAlert;
 
 @end

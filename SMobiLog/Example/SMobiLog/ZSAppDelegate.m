@@ -13,6 +13,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    [[SMobiLogger sharedInterface] installKSCrashWithEmails:@[@"zoeb@systango.com"] withAlert:YES];
     return YES;
 }
 

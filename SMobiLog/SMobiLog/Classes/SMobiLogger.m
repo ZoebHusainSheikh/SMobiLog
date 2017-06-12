@@ -403,5 +403,56 @@ void ExtendNSLogInfo(const char *file, int lineNumber, const char *functionName,
     [object info:message withDescription:detailDescriptionMessage];
 }
 
+#pragma mark - KSCrash
+
+- (KSCrashInstallation *)installKSCrashWithURL:(NSString *)urlPath
+{
+    return [self installKSCrashWithURL:urlPath withAlert:NO];
+}
+
+- (KSCrashInstallation *)installKSCrashWithEmails:(NSArray *)emails
+{
+    return [self installKSCrashWithEmails:emails withAlert:NO];
+}
+
+- (KSCrashInstallation *)installKSCrashWithURL:(NSString *)urlPath withAlert:(BOOL)showAlert
+{
+    KSCrashInstallationStandard* installation = [KSCrashInstallationStandard sharedInstance];
+    installation.url = [NSURL URLWithString:urlPath];
+    return [self installKSCrashWithInstallation:installation withAlert:showAlert];
+}
+
+- (KSCrashInstallation *)installKSCrashWithEmails:(NSArray *)emails withAlert:(BOOL)showAlert
+{
+    KSCrashInstallationEmail* installation = [KSCrashInstallationEmail sharedInstance];
+    installation.recipients = emails;
+    
+    // Optional (Email): Send Apple-style reports instead of JSON
+    [installation setReportStyle:KSCrashEmailReportStyleApple useDefaultFilenameFormat:YES];
+    return [self installKSCrashWithInstallation:installation withAlert:showAlert];
+}
+
+- (KSCrashInstallation *)installKSCrashWithInstallation:(KSCrashInstallation *)installation withAlert:(BOOL)showAlert
+{
+    if(showAlert)
+    {
+        // Optional: Add an alert confirmation (recommended for email installation)
+        [installation addConditionalAlertWithTitle:@"Crash Detected"
+                                           message:@"The app crashed last time it was launched. Send a crash report?"
+                                         yesAnswer:@"Sure!"
+                                          noAnswer:@"No thanks"];
+    }
+    
+    [installation install];
+    
+    [installation sendAllReportsWithCompletion:^(NSArray *filteredReports, BOOL completed, NSError *error) {
+        if(filteredReports.count)
+        {
+            [self error:@"CRASH DETECTED" withDescription:[NSString stringWithFormat:@"Reports:%@/n Error:%@", filteredReports, error]];
+        }
+    }];
+    
+    return installation;
+}
 
 @end

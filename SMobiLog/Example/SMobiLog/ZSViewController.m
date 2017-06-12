@@ -18,6 +18,15 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    [[SMobiLogger sharedInterface] startMobiLogger];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [[NSArray array] objectAtIndex:1];
 }
 
 - (void)didReceiveMemoryWarning
