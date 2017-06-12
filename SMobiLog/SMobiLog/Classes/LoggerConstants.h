@@ -10,6 +10,7 @@
 
 NSString *kDebug = @"Debug";
 NSString *kError = @"Error";
+NSString *kCrash = @"Crash";
 NSString *kInformation = @"Information";
 NSString *kWarning = @"Warning";
 NSString *kOther = @"Other";

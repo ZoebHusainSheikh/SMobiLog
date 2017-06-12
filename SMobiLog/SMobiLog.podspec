@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SMobiLog'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'A delightful iOS loging framework.'
   s.description      = 'SMobiLogger is logger library, which provide logs from iOS device and also provide email logs facility.'
   s.homepage         = 'https://github.com/zsheikh-systango/SMobiLog'

@@ -200,7 +200,7 @@
 
 //Save logs without Queue
 - (void)unCaughtExceptionWithDescription:(NSString*)description{
-    [self saveLogWithTitle:@"Uncaught Exception" description:description logType:kError logDate:[NSDate date]];
+    [self saveLogWithTitle:@"Crashed!" description:description logType:kCrash logDate:[NSDate date]];
 }
 
 #pragma mark - Private methods
@@ -448,7 +448,7 @@ void ExtendNSLogInfo(const char *file, int lineNumber, const char *functionName,
     [installation sendAllReportsWithCompletion:^(NSArray *filteredReports, BOOL completed, NSError *error) {
         if(filteredReports.count)
         {
-            [self error:@"CRASH DETECTED" withDescription:[NSString stringWithFormat:@"Reports:%@/n Error:%@", filteredReports, error]];
+            [self unCaughtExceptionWithDescription:[NSString stringWithFormat:@"Reports:%@/n Error:%@", filteredReports, error]];
         }
     }];
     
