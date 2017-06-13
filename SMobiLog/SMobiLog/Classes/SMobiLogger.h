@@ -11,6 +11,7 @@
 #import <KSCrash/KSCrash.h>
 #import <KSCrash/KSCrashInstallationStandard.h>
 #import <KSCrash/KSCrashInstallationEmail.h>
+#import <KSCrash/KSCrashInstallationConsole.h>
 #import <KSCrash/KSCrashInstallation+Alert.h>
 
 #ifdef DEBUG
@@ -58,9 +59,11 @@ void ExtendNSLogWarning(const char *file, int lineNumber, const char *functionNa
 - (void)startMobiLogger;
 
 #pragma mark - KSCrash
-- (KSCrashInstallation *)installKSCrashWithURL:(NSString *)urlPath;
+- (KSCrashInstallation *)installKSCrashConsole;
+- (KSCrashInstallation *)installKSCrashWithURLString:(NSString *)urlPath;
 - (KSCrashInstallation *)installKSCrashWithEmails:(NSArray *)emails;
-- (KSCrashInstallation *)installKSCrashWithURL:(NSString *)urlPath withAlert:(BOOL)showAlert;
+- (KSCrashInstallation *)installKSCrashConsoleWithAlert:(BOOL)showAlert;
+- (KSCrashInstallation *)installKSCrashWithURLString:(NSString *)urlPath withAlert:(BOOL)showAlert;
 - (KSCrashInstallation *)installKSCrashWithEmails:(NSArray *)emails withAlert:(BOOL)showAlert;
 
 @end

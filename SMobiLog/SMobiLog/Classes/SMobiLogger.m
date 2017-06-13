@@ -405,17 +405,28 @@ void ExtendNSLogInfo(const char *file, int lineNumber, const char *functionName,
 
 #pragma mark - KSCrash
 
-- (KSCrashInstallation *)installKSCrashWithURL:(NSString *)urlPath
+- (KSCrashInstallation *)installKSCrashConsole
 {
-    return [self installKSCrashWithURL:urlPath withAlert:NO];
+    return [self installKSCrashConsoleWithAlert:NO];
+}
+
+- (KSCrashInstallation *)installKSCrashWithURLString:(NSString *)urlPath
+{
+    return [self installKSCrashWithURLString:urlPath withAlert:NO];
 }
 
 - (KSCrashInstallation *)installKSCrashWithEmails:(NSArray *)emails
 {
-    return [self installKSCrashWithEmails:emails withAlert:NO];
+    return [self installKSCrashWithEmails:emails withAlert:YES];
 }
 
-- (KSCrashInstallation *)installKSCrashWithURL:(NSString *)urlPath withAlert:(BOOL)showAlert
+- (KSCrashInstallation *)installKSCrashConsoleWithAlert:(BOOL)showAlert
+{
+    KSCrashInstallationConsole* installation = [KSCrashInstallationConsole sharedInstance];
+    return [self installKSCrashWithInstallation:installation withAlert:showAlert];
+}
+
+- (KSCrashInstallation *)installKSCrashWithURLString:(NSString *)urlPath withAlert:(BOOL)showAlert
 {
     KSCrashInstallationStandard* installation = [KSCrashInstallationStandard sharedInstance];
     installation.url = [NSURL URLWithString:urlPath];

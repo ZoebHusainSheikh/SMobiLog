@@ -12,9 +12,39 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    // Start Logger
+    [[SMobiLogger sharedInterface] startMobiLogger];
     
-    [[SMobiLogger sharedInterface] installKSCrashWithEmails:@[@"zoeb@systango.com"] withAlert:YES];
+    // Install KSCrash
+    [[SMobiLogger sharedInterface] installKSCrashConsoleWithAlert:YES];
+    
+    /*
+    // OR
+    
+    // Install KSCrash with url
+    [[SMobiLogger sharedInterface] installKSCrashWithURLString:@"www.xyz.com"];
+    
+    // OR
+    
+    // Install KSCrash with email and user alert
+    [[SMobiLogger sharedInterface] installKSCrashWithEmails:@[@"zoeb@systango.com"]];
+    
+    // OR
+    
+    // Install KSCrash with user alert
+    [[SMobiLogger sharedInterface] installKSCrashConsoleWithAlert:YES];
+    
+    // OR
+    
+    // Install KSCrash with url and user alert
+    [[SMobiLogger sharedInterface] installKSCrashWithURLString:@"www.xyz.com" withAlert:YES];
+    
+    // OR
+    
+    // Install KSCrash with emails & user alert
+    [[SMobiLogger sharedInterface] installKSCrashWithEmails:@[@"zoeb@systango.com"] withAlert:NO];
+    */
+    
     return YES;
 }
 
