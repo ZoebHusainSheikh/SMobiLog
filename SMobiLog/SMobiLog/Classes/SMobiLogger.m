@@ -16,8 +16,7 @@
 #import "SLogCollectionRealm.h"
 
 @interface SMobiLogger() <MFMailComposeViewControllerDelegate>
-
-@property (nonatomic, strong) MFMailComposeViewController *mailViewController;
+@property(nonatomic,readwrite,retain) UIViewController* dummyVC;
 
 @end
 
@@ -125,31 +124,29 @@
     }
 }
 
-
 //To send logs via email
-- (void)sendEmailLogs:(id)controller {
+- (void)sendEmailLogsWithRecipients:(NSArray *)recipients
+{
     dispatch_async(dispatch_get_main_queue(), ^{
-        self.mailViewController = [[MFMailComposeViewController alloc] init];
-        self.mailViewController.mailComposeDelegate = (id)self;
-        [self.mailViewController setSubject:@"Support Issue"];
-        [self.mailViewController setToRecipients:[NSArray arrayWithObject:@"zoeb@systango.com"]];
-        [self.mailViewController setMessageBody:@"" isHTML:NO];
+        NSString* bundleName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"];
+        MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
+        mailViewController.mailComposeDelegate = (id)self;
+        [mailViewController setSubject:[NSString stringWithFormat:@"Support Issue (%@)", bundleName]];
+        [mailViewController setToRecipients:recipients];
+        [mailViewController setMessageBody:@"" isHTML:NO];
         
         NSString *fetchLogString = [self fetchLogs];
         NSData *textFileContentsData = [fetchLogString dataUsingEncoding:NSUTF8StringEncoding];
         
-        [self.mailViewController addAttachmentData:textFileContentsData mimeType:@"text/plain" fileName:@"log_file"];
+        [mailViewController addAttachmentData:textFileContentsData mimeType:@"binary" fileName:[NSString stringWithFormat:@"support-issue-%@-%%d.txt.gz", bundleName]];
         
-        if (controller && self.mailViewController)
-        {
-            [controller presentViewController:self.mailViewController animated:YES completion:nil];
-        }
+        [self presentModalVC:mailViewController];
     });
 }
 
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error{
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self.mailViewController dismissViewControllerAnimated:YES completion:nil];
+        [self dismissModalVC];
         
         if (error != nil) {
             NSLog(@"Log report sending email fail with error= %@", error);
@@ -161,6 +158,48 @@
             NSLog(@"Log report sent successfully.");
         }
     });
+}
+
+- (void) presentModalVC:(UIViewController*) vc
+{
+    self.dummyVC = [[UIViewController alloc] initWithNibName:nil bundle:nil];
+    self.dummyVC.view = [[UIView alloc] init];
+    
+    UIWindow* window = [[[UIApplication sharedApplication] delegate] window];
+    [window addSubview:self.dummyVC.view];
+    
+    if([self.dummyVC respondsToSelector:@selector(presentViewController:animated:completion:)])
+    {
+        [self.dummyVC presentViewController:vc animated:YES completion:nil];
+    }
+    else
+    {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        [self.dummyVC presentModalViewController:vc animated:YES];
+#pragma clang diagnostic pop
+    }
+}
+
+- (void) dismissModalVC
+{
+    if([self.dummyVC respondsToSelector:@selector(dismissViewControllerAnimated:completion:)])
+    {
+        [self.dummyVC dismissViewControllerAnimated:YES completion:^
+         {
+             [self.dummyVC.view removeFromSuperview];
+             self.dummyVC = nil;
+         }];
+    }
+    else
+    {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        [self.dummyVC dismissModalViewControllerAnimated:NO];
+#pragma clang diagnostic pop
+        [self.dummyVC.view removeFromSuperview];
+        self.dummyVC = nil;
+    }
 }
 
 //Save debug logs

@@ -42,7 +42,7 @@ void ExtendNSLogWarning(const char *file, int lineNumber, const char *functionNa
 - (NSString *)fetchLogs;
 
 // To send logs via email
-- (void)sendEmailLogs:(id)controller;
+- (void)sendEmailLogsWithRecipients:(NSArray *)recipients;
 
 // To get device name
 - (NSString *) deviceName;
