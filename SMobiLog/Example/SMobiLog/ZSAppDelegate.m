@@ -18,8 +18,7 @@
     // Install KSCrash
     [[SMobiLogger sharedInterface] installKSCrashConsoleWithCompletionBlock:^(BOOL success, id response) {
         
-        if(((NSArray *)response).count > 0)
-            dispatch_async(dispatch_get_main_queue(), ^
+        dispatch_async(dispatch_get_main_queue(), ^
                        {
                            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Crash Detected"
                                                                                                     message:@"The app crashed last time it was launched. Send a crash report?"

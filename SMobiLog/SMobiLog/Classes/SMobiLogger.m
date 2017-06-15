@@ -499,9 +499,8 @@ void ExtendNSLogInfo(const char *file, int lineNumber, const char *functionName,
         if(filteredReports.count)
         {
             [self unCaughtExceptionWithDescription:[NSString stringWithFormat:@"Reports:%@/n Error:%@", filteredReports, error]];
+            block(completed, filteredReports);
         }
-        
-        block(completed, filteredReports);
     }];
     
     return installation;
