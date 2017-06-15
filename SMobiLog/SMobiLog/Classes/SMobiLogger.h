@@ -14,6 +14,10 @@
 #import <KSCrash/KSCrashInstallationConsole.h>
 #import <KSCrash/KSCrashInstallation+Alert.h>
 
+#pragma mark - Blocks
+
+typedef void (^smobiCompletionBlock)(BOOL success, id response);
+
 #ifdef DEBUG
 #define NSLog(args...) ExtendNSLogInfo(__FILE__,__LINE__,__PRETTY_FUNCTION__,args);
 #define NSLogError(args...) ExtendNSLogError(__FILE__,__LINE__,__PRETTY_FUNCTION__,args);
@@ -59,11 +63,11 @@ void ExtendNSLogWarning(const char *file, int lineNumber, const char *functionNa
 - (void)startMobiLogger;
 
 #pragma mark - KSCrash
-- (KSCrashInstallation *)installKSCrashConsole;
-- (KSCrashInstallation *)installKSCrashWithURLString:(NSString *)urlPath;
-- (KSCrashInstallation *)installKSCrashWithEmails:(NSArray *)emails;
-- (KSCrashInstallation *)installKSCrashConsoleWithAlert:(BOOL)showAlert;
-- (KSCrashInstallation *)installKSCrashWithURLString:(NSString *)urlPath withAlert:(BOOL)showAlert;
-- (KSCrashInstallation *)installKSCrashWithEmails:(NSArray *)emails withAlert:(BOOL)showAlert;
+- (KSCrashInstallation *)installKSCrashConsoleWithCompletionBlock:(smobiCompletionBlock)block;
+- (KSCrashInstallation *)installKSCrashWithURLString:(NSString *)urlPath withCompletionBlock:(smobiCompletionBlock)block;
+- (KSCrashInstallation *)installKSCrashWithEmails:(NSArray *)emails withCompletionBlock:(smobiCompletionBlock)block;
+- (KSCrashInstallation *)installKSCrashConsoleWithAlert:(BOOL)showAlert withCompletionBlock:(smobiCompletionBlock)block;
+- (KSCrashInstallation *)installKSCrashWithURLString:(NSString *)urlPath withAlert:(BOOL)showAlert withCompletionBlock:(smobiCompletionBlock)block;
+- (KSCrashInstallation *)installKSCrashWithEmails:(NSArray *)emails withAlert:(BOOL)showAlert withCompletionBlock:(smobiCompletionBlock)block;
 
 @end

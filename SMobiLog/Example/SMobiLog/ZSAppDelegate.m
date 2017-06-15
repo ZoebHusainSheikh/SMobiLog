@@ -16,34 +16,55 @@
     [[SMobiLogger sharedInterface] startMobiLogger];
     
     // Install KSCrash
-    [[SMobiLogger sharedInterface] installKSCrashConsoleWithAlert:YES];
+    [[SMobiLogger sharedInterface] installKSCrashConsoleWithCompletionBlock:^(BOOL success, id response) {
+        
+        if(((NSArray *)response).count > 0)
+            dispatch_async(dispatch_get_main_queue(), ^
+                       {
+                           UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Crash Detected"
+                                                                                                    message:@"The app crashed last time it was launched. Send a crash report?"
+                                                                                             preferredStyle:UIAlertControllerStyleAlert];
+                           UIAlertAction *yesAction = [UIAlertAction actionWithTitle:@"Sure!"
+                                                                               style:UIAlertActionStyleDefault
+                                                                             handler:^(UIAlertAction * _Nonnull action) {
+                                                                                 NSLog([NSString stringWithFormat:@"%@", response]);
+                                                                             }];
+                           UIAlertAction *noAction = [UIAlertAction actionWithTitle:@"No thanks"
+                                                                              style:UIAlertActionStyleCancel
+                                                                            handler:nil];
+                           [alertController addAction:yesAction];
+                           [alertController addAction:noAction];
+                           UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
+                           [keyWindow.rootViewController presentViewController:alertController animated:YES completion:NULL];
+                       });
+    }];
     
     /*
-    // OR
-    
-    // Install KSCrash with url
-    [[SMobiLogger sharedInterface] installKSCrashWithURLString:@"www.xyz.com"];
-    
-    // OR
-    
-    // Install KSCrash with email and user alert
-    [[SMobiLogger sharedInterface] installKSCrashWithEmails:@[@"zoeb@systango.com"]];
-    
-    // OR
-    
-    // Install KSCrash with user alert
-    [[SMobiLogger sharedInterface] installKSCrashConsoleWithAlert:YES];
-    
-    // OR
-    
-    // Install KSCrash with url and user alert
-    [[SMobiLogger sharedInterface] installKSCrashWithURLString:@"www.xyz.com" withAlert:YES];
-    
-    // OR
-    
-    // Install KSCrash with emails & user alert
-    [[SMobiLogger sharedInterface] installKSCrashWithEmails:@[@"zoeb@systango.com"] withAlert:NO];
-    */
+     // OR
+     
+     // Install KSCrash with url
+     [[SMobiLogger sharedInterface] installKSCrashWithURLString:@"www.xyz.com"];
+     
+     // OR
+     
+     // Install KSCrash with email and user alert
+     [[SMobiLogger sharedInterface] installKSCrashWithEmails:@[@"zoeb@systango.com"]];
+     
+     // OR
+     
+     // Install KSCrash with user alert
+     [[SMobiLogger sharedInterface] installKSCrashConsoleWithAlert:YES];
+     
+     // OR
+     
+     // Install KSCrash with url and user alert
+     [[SMobiLogger sharedInterface] installKSCrashWithURLString:@"www.xyz.com" withAlert:YES];
+     
+     // OR
+     
+     // Install KSCrash with emails & user alert
+     [[SMobiLogger sharedInterface] installKSCrashWithEmails:@[@"zoeb@systango.com"] withAlert:NO];
+     */
     
     return YES;
 }

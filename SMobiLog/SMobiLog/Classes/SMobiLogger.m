@@ -444,45 +444,45 @@ void ExtendNSLogInfo(const char *file, int lineNumber, const char *functionName,
 
 #pragma mark - KSCrash
 
-- (KSCrashInstallation *)installKSCrashConsole
+- (KSCrashInstallation *)installKSCrashConsoleWithCompletionBlock:(smobiCompletionBlock)block
 {
-    return [self installKSCrashConsoleWithAlert:NO];
+    return [self installKSCrashConsoleWithAlert:NO withCompletionBlock:block];
 }
 
-- (KSCrashInstallation *)installKSCrashWithURLString:(NSString *)urlPath
+- (KSCrashInstallation *)installKSCrashWithURLString:(NSString *)urlPath withCompletionBlock:(smobiCompletionBlock)block
 {
-    return [self installKSCrashWithURLString:urlPath withAlert:NO];
+    return [self installKSCrashWithURLString:urlPath withAlert:NO withCompletionBlock:block];
 }
 
-- (KSCrashInstallation *)installKSCrashWithEmails:(NSArray *)emails
+- (KSCrashInstallation *)installKSCrashWithEmails:(NSArray *)emails withCompletionBlock:(smobiCompletionBlock)block
 {
-    return [self installKSCrashWithEmails:emails withAlert:YES];
+    return [self installKSCrashWithEmails:emails withAlert:YES withCompletionBlock:block];
 }
 
-- (KSCrashInstallation *)installKSCrashConsoleWithAlert:(BOOL)showAlert
+- (KSCrashInstallation *)installKSCrashConsoleWithAlert:(BOOL)showAlert withCompletionBlock:(smobiCompletionBlock)block
 {
     KSCrashInstallationConsole* installation = [KSCrashInstallationConsole sharedInstance];
-    return [self installKSCrashWithInstallation:installation withAlert:showAlert];
+    return [self installKSCrashWithInstallation:installation withAlert:showAlert withCompletionBlock:block];
 }
 
-- (KSCrashInstallation *)installKSCrashWithURLString:(NSString *)urlPath withAlert:(BOOL)showAlert
+- (KSCrashInstallation *)installKSCrashWithURLString:(NSString *)urlPath withAlert:(BOOL)showAlert withCompletionBlock:(smobiCompletionBlock)block
 {
     KSCrashInstallationStandard* installation = [KSCrashInstallationStandard sharedInstance];
     installation.url = [NSURL URLWithString:urlPath];
-    return [self installKSCrashWithInstallation:installation withAlert:showAlert];
+    return [self installKSCrashWithInstallation:installation withAlert:showAlert withCompletionBlock:block];
 }
 
-- (KSCrashInstallation *)installKSCrashWithEmails:(NSArray *)emails withAlert:(BOOL)showAlert
+- (KSCrashInstallation *)installKSCrashWithEmails:(NSArray *)emails withAlert:(BOOL)showAlert withCompletionBlock:(smobiCompletionBlock)block
 {
     KSCrashInstallationEmail* installation = [KSCrashInstallationEmail sharedInstance];
     installation.recipients = emails;
     
     // Optional (Email): Send Apple-style reports instead of JSON
     [installation setReportStyle:KSCrashEmailReportStyleApple useDefaultFilenameFormat:YES];
-    return [self installKSCrashWithInstallation:installation withAlert:showAlert];
+    return [self installKSCrashWithInstallation:installation withAlert:showAlert withCompletionBlock:block];
 }
 
-- (KSCrashInstallation *)installKSCrashWithInstallation:(KSCrashInstallation *)installation withAlert:(BOOL)showAlert
+- (KSCrashInstallation *)installKSCrashWithInstallation:(KSCrashInstallation *)installation withAlert:(BOOL)showAlert withCompletionBlock:(smobiCompletionBlock)block
 {
     if(showAlert)
     {
@@ -500,6 +500,8 @@ void ExtendNSLogInfo(const char *file, int lineNumber, const char *functionName,
         {
             [self unCaughtExceptionWithDescription:[NSString stringWithFormat:@"Reports:%@/n Error:%@", filteredReports, error]];
         }
+        
+        block(completed, filteredReports);
     }];
     
     return installation;
