@@ -33,6 +33,7 @@ $ pod install
 
 | SMobiLog Version | Minimum iOS Target  |                                   Notes                                   |
 |:--------------------:|:---------------------------:|:-------------------------------------------------------------------------:|
+| 0.2.0 | iOS 8 | Get callback with crash report, if app crashed last time |
 | 0.1.5 | iOS 8 | Few bug fixes. |
 | 0.1.4 | iOS 8 | Integrated KSCrash reporting. |
 | 0.1.3 | iOS 8 | Handle Uncaught exceptions. |
@@ -56,10 +57,12 @@ It will clear old logs(currently it stores logs for 2 days, which can be changed
 In Appdelegate's `didFinishLaunchingWithOptions:` call any one of the following method as per your need
 
 ```
-- (KSCrashInstallation *)installKSCrashWithURL:(NSString *)urlPath;
-- (KSCrashInstallation *)installKSCrashWithEmails:(NSArray *)emails;
-- (KSCrashInstallation *)installKSCrashWithURL:(NSString *)urlPath withAlert:(BOOL)showAlert;
-- (KSCrashInstallation *)installKSCrashWithEmails:(NSArray *)emails withAlert:(BOOL)showAlert;
+- (KSCrashInstallation *)installKSCrashConsoleWithCompletionBlock:(smobiCompletionBlock)block;
+- (KSCrashInstallation *)installKSCrashWithURLString:(NSString *)urlPath withCompletionBlock:(smobiCompletionBlock)block;
+- (KSCrashInstallation *)installKSCrashWithEmails:(NSArray *)emails withCompletionBlock:(smobiCompletionBlock)block;
+- (KSCrashInstallation *)installKSCrashConsoleWithAlert:(BOOL)showAlert withCompletionBlock:(smobiCompletionBlock)block;
+- (KSCrashInstallation *)installKSCrashWithURLString:(NSString *)urlPath withAlert:(BOOL)showAlert withCompletionBlock:(smobiCompletionBlock)block;
+- (KSCrashInstallation *)installKSCrashWithEmails:(NSArray *)emails withAlert:(BOOL)showAlert withCompletionBlock:(smobiCompletionBlock)block;
 ```
 
 #### Log Types
@@ -98,7 +101,7 @@ NSString *fetchLogString = [[SMobiLogger sharedInterface] fetchLogs];
 
 To send logs via email (Pass your `UIViewController` on which you want to present `MFMailComposeViewController`)
 ``` 
-- (void)sendEmailLogs:(id)controller;
+- (void)sendEmailLogsWithRecipients:(NSArray *)recipients;
 ``` 
 
 ## Credits
